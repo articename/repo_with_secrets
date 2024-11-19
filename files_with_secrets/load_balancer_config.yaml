@@ -1,0 +1,38 @@
+# Load balancer configuration
+load_balancer:
+  name: production-lb
+  type: http
+  ports:
+    - name: http
+      port: 80
+      target_port: 8080
+    - name: https
+      port: 443
+      target_port: 8443
+  health_check:
+    enabled: true
+    interval: 30s
+    path: /health
+
+# SSL Certificate for HTTPS
+ssl_certificate: |
+  -----BEGIN CERTIFICATE-----
+  MIIDZTCCAk2gAwIBAgIJAPlk7YZK76ZrMA0GCSqGSIb3DQEBCwUAMEIxCzAJBgNV
+  BAYTAlVTMRMwEQYDVQQIDAphbnlzdGF0ZTEMMAoGA1UECgwDT1JHMB4XDTIyMDYw
+  MTEyMDAwMFoXDTMzMDUxOTEyMDAwMFowQjELMAkGA1UEBhMCVVMxEzARBgNVBAgM
+  CmFueXN0YXRlMQwwCgYDVQQKDANPUkcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+  ggEKAoIBAQDD0KxMRBnmAQz5AxDJ06IY7GcOGYIRY74EN6S9PxoWsy6AiCh/Kt5P
+  5F8ocdRr/fO9fzqzJlJKHqYXImu9Rf1NGCVokL1bcOQ/AYphvAdBsUDHkCB0Ng7+
+  pWWXEIXGozU5Zuvh+sPYYUp9/CmRQOvVW63bFGZWHTtFeiBQf1r5mRmwr5i5GMxC
+  mPWh+Ly+Ch7XZxDZbULFPXeVoPCj9gbvO58HEu8/C5TtNv2I0mlLnG5apAsR2Fds
+  DlXbA5JsYDaNhZ5IoDlv64B55f51T1xKgrkhjCWkRzq/7EkF48c3/rXHcmlmBJSH
+  ETD1fOIoF0nOT57F3N9IjkpMBAnIQ/mTAgMBAAGjUzBRMB0GA1UdDgQWBBTpIDog
+  hTPUkZL5qsTccN0XXVlzSjAfBgNVHSMEGDAWgBTpIDoghTPUkZL5qsTccN0XXVlz
+  SjAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAzQh1IX+m+WZEx
+  Ymh0jBNLmUN3FXy1TzVEME+z16Qsb/aVLyR2oRpMnNUj4tOEbMiCWck7NexTLz0K
+  qIToPyA3vnN5nZVn2A+bw3b/oH7k1G1El/JrPtTTm6bqcPU11+kNjrfmopBK3Cr2
+  hZJh6x2XUQUTN3NeaZdyNPlr2yfKqBc4FvRgV0Qbf1GM8YMA+Cu1KfWsSDgXZnFJ
+  5VW5vdczEBhI8VkHswC3gy7G/9gj0EFQrk9/ovkUEjksR2alK+4gp3s+l9sAyjMc
+  RjF1qlb46wCvw/ynqXPojzP3O8Ljyy13Ynx5awcbLLqWQKPGoRys53xVA9ekfIkQ
+  SnftvBYN
+  -----END CERTIFICATE-----

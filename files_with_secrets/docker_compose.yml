@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  webapp:
+    image: my-web-app:latest
+    container_name: webapp_container
+    environment:
+      - DATABASE_URL=postgres://webapp_user:6N3r9m9d5XGhL81r@db.internal:5432/webapp_db
+      - CACHE_URL=redis://:QW4D$!mk1J7@cache.internal:6379
+      - API_KEY=pk_test_xoLgH9nFYrj8HzvG1l1Jt2Tj8bbzYmG4BQ
+
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - cache
+
+  db:
+    image: postgres:13
+    container_name: db_container
+    environment:
+      - POSTGRES_USER=webapp_user
+      - POSTGRES_PASSWORD=qz2Zv#fT4oBw8gDh
+      - POSTGRES_DB=webapp_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  cache:
+    image: redis:alpine
+    container_name: cache_container
+    environment:
+      - REDIS_PASSWORD=dH2r#4ZLjqy8tkpF
+    volumes:
+      - cache_data:/data
+
+volumes:
+  db_data:
+  cache_data:

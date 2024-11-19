@@ -1,0 +1,33 @@
+{
+  "yandex_cloud": {
+    "cloud_id": "b1g7m7r7v4f9vnpp7kpv",
+    "folder_id": "b1g7m7r7v4f9vnpp7kpv_folder",
+    "service_account_key": "/path/to/service-account-key.json",
+    "api_key": "yAH9s@#JXNq3w95Lm37xO8gO2wF5rVs8aK5hbQ0pTP8",
+    "auth_token": "AQAAAAA4yHm50KseG5My06Pd45p9k71zpHk_9Kb9GHk09sbD-R_tMn92Cw4JDNr-QvUGt63i2fP2cxyJZXpqNkJ9xw",
+    "db_connection": {
+      "db_host": "db.yandexcloud.net",
+      "db_user": "db_admin",
+      "db_password": "gB3y%4r^tS8hTpM8xPz0V!c2q7RdCj$61Wdf3Fh1",
+      "db_name": "cloud_database",
+      "db_port": 5432
+    },
+    "api_endpoints": {
+      "compute": "https://compute.api.cloud.yandex.net",
+      "disk": "https://disk.api.cloud.yandex.net",
+      "vpc": "https://vpc.api.cloud.yandex.net"
+    },
+    "networking": {
+      "public_ip": "51.250.25.13",
+      "private_ip": "10.128.0.5",
+      "subnet": "10.128.0.0/20"
+    },
+    "vm_config": {
+      "instance_name": "production-vm",
+      "instance_type": "s2.micro",
+      "zone": "ru-central1-a",
+      "image_id": "fd8d084vq19eq8ba7v78",
+      "ssh_key": "/home/user/.ssh/id_rsa"
+    }
+  }
+}

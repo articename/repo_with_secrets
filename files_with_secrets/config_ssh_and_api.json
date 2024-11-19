@@ -1,0 +1,28 @@
+{
+    "api_credentials": {
+        "api_key": "5f8e42e1-89a1-4b3f-bb2e-834c6b6cf123",
+        "api_endpoint": "https://api.example.com/v1/resource",
+        "description": "API key for accessing the example.com resource endpoint."
+    },
+    "ssh_keys": {
+        "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAwv7AEMemxOdz5MloFgkG15UO7EppowKPm8Q3eEhoQGdj+qVHp/uT5zgIRfT8c6wsEnrT8T3wHg1D5rE2Op5lcfMiRdZdo4OgSyhdofkj3B7JHk8p/B5vO7w== user@example.com",
+        "private_key": "-----BEGIN OPENSSH PRIVATE KEY-----\nMIICXQIBAAKBgQC1qk5Ch5Wd0shTcUMXnfuBJfz2BVKs5Ll5s8nqgIH+wTUzBzNa\n...\n-----END OPENSSH PRIVATE KEY-----",
+        "purpose": "Used for connecting to the staging server via SSH."
+    },
+    "server_info": {
+        "database_url": "postgresql://user:password@db.example.com:5432/mydatabase",
+        "server_url": "https://backend.example.com",
+        "open_ports": [22, 443],
+        "description": "Configuration for connecting to the backend and database servers."
+    },
+    "additional_settings": {
+        "logging": {
+            "level": "INFO",
+            "output_file": "/var/log/application.log"
+        },
+        "retry_policy": {
+            "max_retries": 5,
+            "backoff_strategy": "exponential"
+        }
+    }
+}
