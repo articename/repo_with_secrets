@@ -1,0 +1,32 @@
+FROM alpine:3.18
+
+ENV API_ACCESS_TOKEN="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXJ2aWNlIjoicHJvZC1iYWNrZW5kLXYyIiwiZXhwIjo5OTk5OTk5OTk5fQ.7f9q4tLkXy$B&E)H@McQeThWmZq4t6w9z$C&F)J@NcRf" \
+    MONITORING_REFRESH_TOKEN="v5.abcdEFGH1234-5678IJKL-90MNOPQRSTUVWXYZ"
+
+ARG AES_256_GCM_KEY="d2hdGNoIG5vdCByZWFsIHNlY3JldHMhIT8kJV4mKigpX19fKy09" \
+    CHACHA20_IETF_KEY="JDJhJDEwJEVmNXFkLmJ5SHVLN2cuLi5XT1dPMi5XT1dPMQ=="
+
+COPY <<EOF /etc/ssl/private/keys.pem
+-----BEGIN PRIVATE KEY-----
+MIIJQwIBADANBgkqhkiG9w0BAQEFAASCCS0wggkpAgEAAoICAQDEiJyZP3q4t6w9
+z$C&F)J@NcRfUjXn2r5u8x/A?D(G+KaPdSgVkYp3s6v9y$B&E)H@McQfTjWnZr4u7
+x!z%C*F-JaNdRgUkXp2s5v8y/B?E(H+MbQeThWmZq4t6w9z$C&F)J@NcRfUjXn2r5u
+-----END PRIVATE KEY-----
+-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIGY9X2R5SHVLN2cuV09XTzIuV09XTzFCMkIuQ2FqLkROaoAoGCCqGSM49
+AwEHoUQDQgAEZidSe1+y+J0ZPWcxfBoypT6qGMDXA8TH95ir+oVp06V8kr9CW+3QH
+tX9ml/K+7C7dGjebDN2NWcdqyPZhOIxqtQ==
+-----END EC PRIVATE KEY-----
+EOF
+
+ENV HMAC_SIGNING_KEY="U2VjcmV0S2V5XzEyMzQ1Njc4OTBBQkNERUZHSElKS0w=" \
+    TOTP_ROOT_SECRET="ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"
+
+RUN echo "postgres_prod_v2:VGVycmFmb3JtMkBhc3RybkB3b3JsZCEjMTIz" > /etc/auth/db_creds && \
+    echo "redis_admin:Q2x1c3RlckBQYXNzd29yZCEhITMyMUhBU0g=" >> /etc/auth/db_creds
+
+RUN chmod 0400 /etc/ssl/private/keys.pem /etc/auth/db_creds && \
+    adduser -D -u 1001 appuser
+
+USER appuser
+CMD ["/app/entrypoint.sh"]

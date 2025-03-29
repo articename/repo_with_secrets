@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SecretsConfiguration>
+  <AccessTokens>
+    <Secret>
+      <Identifier>api_gateway_prod</Identifier>
+      <Value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFQSSBHYXRld2F5IiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE3MTAyOTQwMDB9.8z4l9Q7ZfKmT3vRxjJk8WpYHdXqgS2LbN1wVr5oP_7I</Value>
+      <Expiration>2024-07-01T00:00:00Z</Expiration>
+    </Secret>
+    <Secret>
+      <Identifier>refresh_sync_service</Identifier>
+      <Value>v1.aeb8c50f39d7b4d6e5f2a0c1b8e7d9f0f3a2b1c4d5e6f7a8b9c0d1e2f3a4b5</Value>
+      <MaxUsageCount>50</MaxUsageCount>
+    </Secret>
+  </AccessTokens>
+
+  <SymmetricKeys>
+    <Secret>
+      <Algorithm>AES-256-GCM</Algorithm>
+      <Key>k7Dm9Xp2s5v8y/B?E(H+MbQeThWmZq4t6</Key>
+      <InitializationVector>wCj4JfLq9tRv2s5u</InitializationVector>
+    </Secret>
+    <Secret>
+      <Algorithm>ChaCha20-Poly1305</Algorithm>
+      <Key>Np3s6v9y$B&E)H@McQfTjWnZr4u7x!z%C</Key>
+      <Nonce>dRgUkXp2s5v8y/B?</Nonce>
+    </Secret>
+  </SymmetricKeys>
+
+  <AsymmetricPrivateKeys>
+    <Secret>
+      <KeyID>rsa_main_2048</KeyID>
+      <Value>-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7VJUmLQHkCbZj
+t1qX7L4nRk9ZzF8GjKlPqoYwNcDxMf3mKv6hWnTpXySv0Jb7dAe1f2aX8r7sLt0
+aN5sM3Y1Zx2rI9mE4jGq1oW8v7XlRk9ZzF8GjKlPqoYwNcDxMf3mKv6hWnTpXyS
+v0Jb7dAe1f2aX8r7sLt0aN5sM3Y1Zx2rI9mE4jGq1oW8v7Xl
+-----END PRIVATE KEY-----</Value>
+    </Secret>
+    <Secret>
+      <KeyID>ecc_secp384r1</KeyID>
+      <Value>-----BEGIN EC PRIVATE KEY-----
+MIGkAgEBBDCf9bR3h5U7Z8K9X4Qn7JjPqoYwNcDxMf3mKv6hWnTpXySv0Jb7dAe
+1f2aX8r7sLt0aN5sM3Y1Zx2rI9mE4gYIKoZIzj0DAQehRANCAATN
+mJ1J7X7L4nRk9ZzF8GjKlPqoYwNcDxMf3mKv6hWnTpXySv0Jb7dAe1f2aX8r7sLt0
+aN5sM3Y1Zx2r
+-----END EC PRIVATE KEY-----</Value>
+    </Secret>
+  </AsymmetricPrivateKeys>
+
+  <CryptographicSecrets>
+    <Secret>
+      <Purpose>JWT_SIGNING</Purpose>
+      <Key>U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1NlY3JldEtleQ==</Key>
+    </Secret>
+    <Secret>
+      <Purpose>TOTP_KEY</Purpose>
+      <Key>GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ</Key>
+    </Secret>
+  </CryptographicSecrets>
+
+  <Credentials>
+    <Secret>
+      <Service>database_backup</Service>
+      <Username>bkadmin_aws_rds</Username>
+      <Password>Qm9zY2hpMkByb3Nzb2x1dGUhMzIxIQ==</Password>
+    </Secret>
+    <Secret>
+      <Service>vpn_gateway</Service>
+      <Username>vpn_service_account</Username>
+      <Password>JDJhJDEwJFdQN3VqLmJZQnZ5Yk9WUkx6dS4uLi4zN2JhU1B0c2dEaDl0V0x5Q3p6Uy9Xa1RQ</Password>
+    </Secret>
+  </Credentials>
+</SecretsConfiguration>

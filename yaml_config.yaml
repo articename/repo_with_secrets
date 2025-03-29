@@ -1,0 +1,46 @@
+---
+access_tokens:
+  - identifier: "auth_service_prod"
+    value: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZXJ2aWNlX2FjY291bnQiLCJzY29wZSI6ImFwaSIsImV4cCI6MTk4NzM1NDAwMCwiaWF0IjoxNzMyOTk0MDAwfQ.Km9Zq4t6w9z$C&F)J@NcRfUjXn2r5u8x/A?D(G+KaPdSgVkYp3s6v9y$B&E)H@Mc"
+    expiration: "2032-12-31T23:59:59Z"
+  - identifier: "payment_gateway_refresh"
+    value: "v2.1eb8c50f39d7b4d6e5f2a0c1b8e7d9f0f3a2b1c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9g0h1i2j3"
+    rotation_interval: "P30D"
+
+symmetric_keys:
+  - algorithm: "AES-256-CBC"
+    key: "u3x/A?D(G+KbPeShVmYq3t6w9z$C&F)J@NcRfUjXn2r5u8x/A?D(G+KbPeShVmY"
+    iv: "dRgUkXp2s5v8y/B?"
+  - algorithm: "ChaCha20-IETF"
+    key: "Np3s6v9y$B&E)H@McQfTjWnZr4u7x!z%C*F-JaNdRgUkXp2s5v8y/B?E(H+MbQ"
+    nonce: "qJeKtGw9z$C&F)J@"
+
+asymmetric_private_keys:
+  - key_id: "rsa_4096_main"
+    value: |
+      -----BEGIN PRIVATE KEY-----
+      MIIJQgIBADANBgkqhkiG9w0BAQEFAASCCSwwggkoAgEAAoICAQDEzMz9Zq4t6w9z
+      $C&F)J@NcRfUjXn2r5u8x/A?D(G+KaPdSgVkYp3s6v9y$B&E)H@McQfTjWnZr4u7
+      x!z%C*F-JaNdRgUkXp2s5v8y/B?E(H+MbQeThWmZq4t6w9z$C&F)J@NcRfUjXn2r
+      5u8x/A?D(G+KaPdSgVkYp3s6v9y$B&E)H@McQfTjWnZr4u7x!z%C*F-JaNdRgUkX
+      -----END PRIVATE KEY-----
+  - key_id: "ed25519_backup"
+    value: |
+      -----BEGIN PRIVATE KEY-----
+      MC4CAQAwBQYDK2VwBCIEIJepT0Z4sZ7K9X4Qn7JjPqoYwNcDxMf3mKv6hWnTpXyS
+      v0Jb7dAe1f2aX8r7sLt0aN5sM3Y1Zx2rI9mE4jGq1oW8v7XlRk9ZzF8GjKlPqoY
+      -----END PRIVATE KEY-----
+
+cryptographic_secrets:
+  - purpose: "DATA_SIGNING"
+    key: "U2VjcmV0U2lnbmluZ0tleV8xMjM0NTY3ODkwYWJjZGVmZw=="
+  - purpose: "HMAC_SECRET"
+    key: "JDJhJDEwJGdWVy5CMkIuQ2FqLkROVS5URC4uLi4uLi4uV09XMy5XT1dPMi5XT1dPMQ=="
+
+credentials:
+  - service: "monitoring_system"
+    username: "prometheus_svc"
+    password: "VGVycmFmb3JtMkBhc3RybkB3b3JsZCEjMTIz"
+  - service: "queue_broker"
+    username: "rabbitmq_admin"
+    password: "Q2x1c3RlclNlY3VyZVBhc3N3b3JkISEhMzIxUGFzc3dvcmQ="

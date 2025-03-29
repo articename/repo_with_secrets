@@ -1,0 +1,81 @@
+{
+  "access_tokens": [
+    {
+      "id": "auth_svc_az1",
+      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZDQ4ZjA1MWItOTk1MC00ZWM4LWE4NGYtMjJiNzVkY2JhMzRiIiwic2NvcGUiOiJ3cml0ZTphcGkiLCJleHAiOjE3Mjg1NDQ4MDB9.7fXKw6Lz3q4QlHq9Jt8Yn7KkRjvWpDn1sV2mCbLgG_A",
+      "refresh_token": "7b4e5f8c-3a1d-4f5a-9b0c-8d3e6f7a9b0d",
+      "expires_at": 1728544800,
+      "user_id": "d48f051b-9950-4ec8-a84f-22b75dcba34b"
+    },
+    {
+      "id": "cloud_api_ky2",
+      "api_key": "AKIATV4YLUABCDEFGHIJKL",
+      "service": "aws_s3",
+      "created_at": 1718059200,
+      "permissions": ["s3:GetObject", "s3:PutObject"]
+    }
+  ],
+  "symmetric_keys": [
+    {
+      "id": "db_enc_01",
+      "key": "j3F9vXqLtRwYkZ7ShPdSg5NDmKb8cJh6",
+      "algorithm": "AES-256-GCM",
+      "key_length": 256,
+      "iv": "a1B2c3D4e5F6g7H8"
+    },
+    {
+      "id": "msg_crypto_02",
+      "key": "U2FsdGVkX1+jnJx4kE6W9Qv/3yhOL7pMlwN1rKsTqB0=",
+      "algorithm": "AES-128-CBC",
+      "key_length": 128,
+      "created_by": "key_rotation_system_v3"
+    }
+  ],
+  "asymmetric_private_keys": [
+    {
+      "id": "prod_tls_rsa4096",
+      "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCAgEA4VhJ6J0m8z7jJk9LhPYtDvGw3XqRtGf2cN1sKpQb2Zl7WqSd\n7bKk9HxYrXqN8mQvYd5iSj8a7cUo2WlP6n1zCwJ9yD3aV2eE5qRt0gZ7MpO\nzXpCw7qK9l8mR2sV3yTgHvLbW1NcD0fE5PjGkAoZJzM2eF7rIuOqYtUwCAw\nEAAQKCAgB3fZ8W1kYt7xqP9mLyRvX4cV6bNmLMnQ9HxYrXqN8mQvYd5iSj8a7c\nUo2WlP6n1zCwJ9yD3aV2eE5qRt0gZ7MpOzXpCw7qK9l8mR2sV3yTgHvLbW1\nNcD0fE5PjGkAoZJzM2eF7rIuOqYtUwIDAQABAoIBAQDhWEnonSbzPuMmT0uE9i0O\n8bDdepG0Z/Zw3WwqlBvZmXtapJ3tsqT0fFiteo3yZC9h3mJKPxrtxSjZaU/qfXML\nAn3IPdpXZ4TmpG3SBnsyk7NekLDuor2XyZHaxXfJOAe8ttbU1wPR8Tk+MaQChknM\nzZ4Xusi46pi1Q4VhJ6J0m8z7jJk9LhPYtDvGw3XqRtGf2cN1sKpQb2Zl7WqSd7bK\nk9HxYrXqN8mQvYd5iSj8a7cUo2WlP6n1zCwJ9yD3aV2eE5qRt0gZ7MpOzXpCw7q\nK9l8mR2sV3yTgHvLbW1NcD0fE5PjGkAoZJzM2eF7rIuOqYtUwgggPIIJq3tZz6h\nhQKBgQD8iN7O4v7Xj1KJyRvX4cV6bNmLMnQ9HxYrXqN8mQvYd5iSj8a7cUo2WlP6\nn1zCwJ9yD3aV2eE5qRt0gZ7MpOzXpCw7qK9l8mR2sV3yTgHvLbW1NcD0fE5PjGk\nAoZJzM2eF7rIuOqYtUwIDAQAB\n-----END RSA PRIVATE KEY-----",
+      "public_key_hash": "sha256-LqNWBE5s5z+8mJKYkZ0V7h9OjXtM3p6S",
+      "key_size": 4096,
+      "valid_until": 1893456000
+    },
+    {
+      "id": "code_signing_ec521",
+      "private_key": "-----BEGIN EC PRIVATE KEY-----\nMIHcAgEBBEIB2z6V7TCqZ4wY7k9Jj4k7m1WpFrD2sXvYbNcRqPtgL0aTdM5yB7/S1n\n6hK8wQvD3eYHjUqRl9mPxZsV7G+bKpahvKmgBwYFK4EEACOhgYkDgYYABAGe\nF9Z7Kj43q7Q4R6f+W7Jg4pLkzV1mNoGpSJdP2W6ToAKoAoGCCqGSM49AwEH\nMDswFTETMBEGA1UECgwKQ29kZVNpZ25lcjEfMB0GA1UEAwwWQ29kZVNpZ25p\nbmdfRUMyNTZfUFIxMRAwDwYDVQQHDAhDdXJ2ZTUyMQ==\n-----END EC PRIVATE KEY-----",
+      "curve_name": "secp521r1",
+      "fingerprint": "d3:8b:4e:07:cf:4a:d1:be:e9:35:27:71:8a:6c:ee:97"
+    }
+  ],
+  "crypto_secrets": [
+    {
+      "id": "jwt_hmac_01",
+      "secret": "4#mR7sLk!9vXyPwQzTbWgZq3t6n8d0c",
+      "purpose": "JWT_HMAC_SIGNING",
+      "algorithm": "HS512",
+      "rotation_interval": 90
+    },
+    {
+      "id": "totp_seed_42",
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "issuer": "AuthService2FA",
+      "digits": 6,
+      "period": 30
+    }
+  ],
+  "credentials": [
+    {
+      "id": "db_admin_01",
+      "service": "postgres_prod_05",
+      "username": "pg_admin",
+      "password": "V7x$vR2qL9pE*WnS",
+      "connection_limit": 15
+    },
+    {
+      "id": "backup_system_ssh",
+      "host": "bkp-node-04.internal",
+      "passphrase": "c3VwM3JTMWNyM3QhQCMkJV4mKg==",
+      "key_type": "ed25519",
+      "last_used": 1718060400
+    }
+  ]
+}
